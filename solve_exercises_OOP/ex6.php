@@ -15,8 +15,6 @@ class Circle extends Shape {
     public function calulateArea(){
         return pi() * pow($this->dientich, 2);
     }
-
-
 }
 
 $myCircle = new Circle(5);

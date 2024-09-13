@@ -9,22 +9,23 @@ class Car{
 
     public function __construct($color, $brand, $speed )
     {
-        $this -> color = $color;
-        $this -> brand = $brand;
-        $this -> speed = $speed;
+        $this->color = $color;
+        $this->brand = $brand;
+        $this->speed = $speed;
     }
 }
 
 class ElectricCar extends Car{
     public $batteryLevel;
+
     public function __construct($color, $brand, $speed, $batteryLevel)
     {
         parent::__construct($color, $brand, $speed);
-        $this -> batteryLevel = $batteryLevel;
+        $this->batteryLevel = $batteryLevel;
     }
 
     public function chargeBattery($amount){
-        $this -> batteryLevel += $amount;
+        $this->batteryLevel += $amount;
 
         if($this->batteryLevel > 100){
             $this->batteryLevel = 100;

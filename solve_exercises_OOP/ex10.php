@@ -54,18 +54,25 @@ class Person{
         $this->age = $age;
     }
 
-    public function drive($vehicle){
+    public function drive(Vehicle $vehicle){
         return $vehicle;
     }
 }
 
+$z1000 = new Car('z1000', 1000);
+
+$huypham = new Person('Pham Dinh Huy', 20);
+
+$huypham->drive($z1000);
 
 class VehicleManager{
-    public function addVehicle($vehicle){
-        return $vehicle;
+    public $listVehicle = [];
+
+    public function addVehicle(Vehicle $vehicle){
+        $this->listVehicle[] = $vehicle;
     }
 
     public function showAllVehicles(){
-        
+        return $this->listVehicle;
     }
 }
